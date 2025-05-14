@@ -9,7 +9,11 @@ btns.forEach((e) => {
     if (inputField.innerHTML === "0") {
       inputField.innerHTML = "";
     }
-    inputField.innerHTML += e.innerHTML;
+    if (e.innerHTML === "÷") {
+      inputField.innerHTML += "/";
+    } else {
+      inputField.innerHTML += e.innerHTML;
+    }
   });
 });
 
